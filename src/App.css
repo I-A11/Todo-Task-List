@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  font-family: "Signika", sans-serif;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li {
+  list-style: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #da6262;
+  height: 80px;
+  font-size: 1.5rem;
+}
+
+.section-center {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
+}
+
+.form-control {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.alert {
+  margin-bottom: 1rem;
+  height: 1.25rem;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+}
+.alert-danger {
+  color: #9b1616;
+  background: #f0ebeb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.alert-success {
+  color: #42d1ad;
+  background: #f0ebeb;
+}
+
+.grocery-form h2 {
+  padding-bottom: 1rem;
+  font-size: 2.2rem;
+  color: #be5656;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#grocery {
+  width: 20rem;
+  height: 2rem;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  border-color: #df8484;
+}
+
+.submit-btn {
+  border-style: none;
+  background: #df8484;
+  cursor: pointer;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+select {
+  width: 7rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  border-color: #df8484;
+  margin-left: 20px;
+}
+
+/* Todo section */
+.todo-container {
+  display: flex;
+  justify-content: center;
+}
+.todo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+.todo-item {
+  margin-right: 10px;
+  border: solid 1px #df8484;
+  padding: 3px;
+  border-radius: 5px;
+  width: 15rem;
+}
+
+/* end of todo section */
+.grocery-container {
+  margin-top: 2rem;
+  visibility: visible;
+}
+
+.show-container {
+  visibility: visible;
+}
+
+.grocery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+}
+
+.title {
+  padding-right: 17rem;
+}
+
+.complete-btn,
+.trash-btn {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 0.75rem;
+  margin: 0 0.15rem;
+}
+
+.complete-btn {
+  color: #6be675;
+}
+
+.trash-btn {
+  color: #c72727;
+}
+
+.clear-btn {
+  text-transform: capitalize;
+  width: 10rem;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  margin-left: 6rem;
+  letter-spacing: 0.25rem;
+  font-size: 1rem;
+  background: transparent;
+  border-color: transparent;
+  color: #be5656;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .nav-bar {
+    font-size: 1rem;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .grocery-form h2 {
+    font-size: 1.5rem;
+  }
+  #grocery {
+    width: 15rem;
+    height: 2rem;
+  }
+  .title {
+    padding-right: 12rem;
+  }
+
+  .clear-btn {
+    text-transform: capitalize;
+    width: 8rem;
+    letter-spacing: 0.2rem;
+    font-size: 0.9rem;
   }
 }
