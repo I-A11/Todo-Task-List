@@ -1,5 +1,5 @@
 import React from "react";
-const Form = ({ textInput, setTextInput, todos, setTodos }) => {
+const Form = ({ textInput, setTextInput, todos, setTodos, setStatus }) => {
   const textInputHandler = (e) => {
     // console.log(e.target.value);
     setTextInput(e.target.value);
@@ -11,6 +11,9 @@ const Form = ({ textInput, setTextInput, todos, setTodos }) => {
       { text: textInput, completed: false, id: Math.random() * 1000 },
     ]);
     setTextInput("");
+  };
+  const setStatusHandler = (e) => {
+    setStatus(e.target.value);
   };
   return (
     <>
@@ -29,7 +32,11 @@ const Form = ({ textInput, setTextInput, todos, setTodos }) => {
             Submit
           </button>
           <div className='select'>
-            <select name='todos' className='filter-todo'>
+            <select
+              onChange={setStatusHandler}
+              name='todos'
+              className='filter-todo'
+            >
               <option value='all'>All</option>
               <option value='completed'>Completed</option>
               <option value='uncompleted'>Uncompleted</option>
